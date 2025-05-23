@@ -1,0 +1,80 @@
+.menu  {
+    background-color:#ecf5ff;
+    margin: 10px;
+    padding: 10px;
+   font-size: 20px;
+}
+
+.patitas {
+    background: url("imagenes/huellas\ 1.png");
+    background-size: 50%;
+}
+.patitas h2 {
+    font-family: 'Londrina Solid', cursive;
+    margin: 0% auto ;
+    padding: 10px;
+    text-align: center;
+}
+header{
+    font-family: 'Londrina Shadow', cursive;
+    font-size: 50px;
+    text-align: center;
+
+}
+header img{
+    width: 80px;
+    height: 80px;
+}
+
+.imagenes{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 8px;
+  margin: 50px auto;
+  padding: 10px;
+  flex-wrap: wrap;
+}
+.imagenes img {
+  width: 120%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 0px;
+}
+.footer {
+  background-color:#ccdcff;
+  padding: 10px;
+}
+
+.contacto {
+  display: flex;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.contacto img {
+  width: 30px;
+  height: 24px;
+}
+.centrado{
+ margin-left: 44%;
+ font-size: 30px;
+ text-align: center;
+}
+.colormenu{
+    background-color: #ecf5ff;
+}
+nav a{
+    font-family: londrina solid;
+    margin: 5px;
+    text-decoration: none;
+    padding: 5px;
+}
+nav a:hover{
+    font-weight: bold;
+}
+.boton{
+    background-color: #ccdcff;
+}
+
+
