@@ -1,3 +1,6 @@
+body {
+  background-color: #fffbfb;
+}
 .menu  {
     background-color:#ecf5ff;
     margin: 10px;
@@ -6,14 +9,28 @@
 }
 
 .patitas {
-    background: url("imagenes/huellas\ 1.png");
-    background-size: 50%;
+  position: relative;
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 40px 20px;
+  background-image: url("imagenes/huellas.png"); /* asegurate de tener esta imagen */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 .patitas h2 {
     font-family: 'Londrina Solid', cursive;
     margin: 0% auto ;
     padding: 10px;
     text-align: center;
+}
+.huellas {
+  width: 1000px; /* ajustá tamaño según necesites */
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
 }
 header{
     font-family: 'Londrina Shadow', cursive;
@@ -34,6 +51,7 @@ header img{
   margin: 50px auto;
   padding: 10px;
   flex-wrap: wrap;
+  background-color: #ecf5ff;
 }
 .imagenes img {
   width: 120%;
@@ -57,7 +75,7 @@ header img{
   height: 24px;
 }
 .centrado{
- margin-left: 44%;
+ margin-left: 43%;
  font-size: 30px;
  text-align: center;
 }
@@ -77,4 +95,158 @@ nav a:hover{
     background-color: #ccdcff;
 }
 
+.cuidado {
+  padding: 30px;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.consejos {
+  width: 300px;
+  background-color: #ecf5ff;
+  background-size: 70%;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.consejos img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.consejos h2 {
+  text-align: center;
+  margin-top: 10px;
+  color: #333;
+}
+
+.consejos ol {
+  margin-top: 10px;
+  padding-left: 20px;
+  font-size: 50px;
+}
+
+.consejos li {
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-family: 'Londrina Solid', cursive;
+}
+.cuidado h2 {
+  font-family: 'Londrina Solid', cursive;
+  margin: 5%;
+}
+
+.nosotros {
+  padding: 40px 20px;
+  background-color: #fffbfb;
+  background-image: url("imagenes/huellas.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 200px;
+}
+
+.container{
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.texto {
+  flex: 1;
+  min-width: 200px;
+  max-width: 400px;
+  font-size: 16px;
+  line-height: 1,6;
+}
+
+.texto h3 {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  font-family:'Londrina Solid', cursive;
+}
+
+.invitacion {
+  margin-top: 30px;
+  font-family:'Londrina Solid', cursive;
+  font-weight: 500;
+}
+
+.imagenes {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.imagenes img {
+  width: 270px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.perros {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px;
+  background-color: #f8fbff;
+}
+.gatos {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px;
+  background-color: #f8fbff;
+}
+.tarjeta {
+  display: flex;
+  align-items: center;
+  background-color: #e2edfb;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+
+}
+
+.tarjeta img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+
+.texto h2 {
+  margin: 0;
+  font-size: 30px;
+  color: #3a3a3a;
+}
+
+.texto p {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+  font-family:'Londrina Solid', cursive;
+}
+.texto {
+  width: 80%;
+}
+
+.flecha img {
+  width: 100px;
+  height: 100px;
+  background-color: #ccdcff;
+  margin-left: 800px;
+}
 
