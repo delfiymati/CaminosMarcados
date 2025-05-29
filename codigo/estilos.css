@@ -171,25 +171,34 @@ nav a:hover{
   align-items: flex-start;
 }
 
-.texto {
+.texto1 {
   flex: 1;
   min-width: 200px;
-  max-width: 400px;
   font-size: 16px;
   line-height: 1,6;
+  background-color: #ccdcff;
+  border-radius: 10px;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 700px;
+
 }
 
-.texto h3 {
+.texto1 h3 {
   margin-top: 20px;
-  font-size: 18px;
+  font-size: 24px;
   font-weight: bold;
   font-family:'Londrina Solid', cursive;
+}
+.texto1 p {
+  font-size: 20px;
 }
 
 .invitacion {
   margin-top: 30px;
   font-family:'Londrina Solid', cursive;
   font-weight: 500;
+  font-size: 20px;
 }
 
 .imagenes2 {
@@ -197,20 +206,55 @@ nav a:hover{
   flex-direction: column;
   gap: 20px;
   background-color: #ccdcff;
+  border-radius: 10px;
 }
 
 .imagenes2 img {
-  width: 270px;
-  border-radius: 0px;
+  width: 296px;
+  border-radius: 10px;
   object-fit: cover;
 }
 
 /*pagina como adoptar*/
 .container2 {
-  text-align:left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   font-family:'Londrina Solid', cursive;
+  padding: 40px 20px;
+}
+.pasos{
+  position: relative;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.items{
+  position: relative;
+  z-index: 1;
+  background-color: #ccdcff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  text-align: left;
+  font-size: 20px;
+}
+.huellas2{
+  position: relative;
+  text-align: center;
+  margin-bottom: 40px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.1;
+  z-index: 0;
+  width: 300px;
 }
 .video {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 80px;
+  margin: 40px;
   
 }
 /* pagina perros y gatos*/

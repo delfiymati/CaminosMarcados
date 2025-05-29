@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <meta charset="UTF-8">
-  <title>Gatos</title>
-  <link href="https://fonts.googleapis.com/css2?family=Londrina+Shadow&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="estilos.css">
+    <meta charset="UTF-8">
+    <title>Gatos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Shadow&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+    <script type="text/javascript" src="funciones.js"></script>
 </head>
-<body>
+
+<body onload="mostraranimales1()">
     <header>
         <strong>CAMINOS</strong>
         <img src="imagenes/logo1.jpg" alt="logo">
@@ -15,12 +19,31 @@
     </header>
     <nav>
         <div class="menu">
-            <button class="boton">
-               <img src="imagenes/Hamburger_icon.jpg" alt="burger" width="30">
-            </button>
-            <span class="centrado"><strong>Gatos</strong></span>
+            <div>
+                <button class="boton" onclick="mostrarocultar()">
+                    <img src="imagenes/Hamburger_icon.jpg" alt="burger" width="30">
+                </button>
+                <span class="centrado"><strong>Gatos</strong></span>
+            </div>
+            <div class="filtros">
+                <form id="formfiltro">
+                    <select name="Edad" onclick="filtrar('Edad',this,'gato')">
+                        <option value="1">0 hasta 6 meses</option>
+                        <option value="2">1 hasta 2 años</option>
+                        <option value="3">3 hasta 6 años</option>
+                        <option value="4">7 o mas</option>
+                    </select>
+                    <select name="Sexo" onclick="filtrar('Sexo',this,'gato')">
+                        <option value="macho">Macho</option>
+                        <option value="hembra">Hembra</option>
+                    </select>
+
+                </form>
+
+
+            </div>
         </div>
-        <div class="menu">
+        <div class="menu" id="menu">
             <a href="index.html">Home</a>
             <a href="sobrenosotros.html">Sobre Nosotros</a>
             <a href="comoadoptar.html">Como Adoptar</a>
@@ -29,13 +52,15 @@
             <a href="gatos.html">Gatos</a>
         </div>
     </nav>
-    <div class="gatos">
+
+    <div class="gatos" id="gatos">
         <div class="tarjeta">
             <img src="imagenes/Gina.jpg" alt="Gina">
             <div class="texto">
                 <h2>Gina</h2>
-                <p>Con su elegancia natural y esos ojos que todo lo observan, Gina es puro misterio y encanto felino. 
-                Independiente, curiosa y con una personalidad única, llega silenciosa… y se queda para siempre en tu corazón.</p>
+                <p>Con su elegancia natural y esos ojos que todo lo observan, Gina es puro misterio y encanto felino.
+                    Independiente, curiosa y con una personalidad única, llega silenciosa… y se queda para siempre en tu
+                    corazón.</p>
             </div>
             <div class="flecha">
                 <a href="gina.html">
@@ -48,22 +73,25 @@
             <img src="imagenes/teo.jpg" alt="Teo">
             <div class="texto">
                 <h2>Teo</h2>
-                <p>Dueño de una mirada intensa y un estilo único, Teo combina elegancia felina con una pizca de misterio. 
-                Parece serio, pero cuando se relaja… ¡es puro mimo y ronroneo!</p>
+                <p>Dueño de una mirada intensa y un estilo único, Teo combina elegancia felina con una pizca de
+                    misterio.
+                    Parece serio, pero cuando se relaja… ¡es puro mimo y ronroneo!</p>
             </div>
             <div class="flecha">
                 <a href="teo.html">
                     <img src="imagenes/flecha.png" alt="ver más">
-                </a>  
+                </a>
             </div>
         </div>
-       
+
         <div class="tarjeta">
             <img src="imagenes/Keyla.jpg" alt="Keyla">
             <div class="texto">
                 <h2>Keyla</h2>
-                <p>Dueña de una mirada que impone y una elegancia natural, Keyla no necesita esforzarse para ser el centro de atención.
-                Tranquila, observadora y con alma de reina,es la compañera perfecta para quienes saben apreciar el arte de vivir despacito… y con estilo.</p>
+                <p>Dueña de una mirada que impone y una elegancia natural, Keyla no necesita esforzarse para ser el
+                    centro de atención.
+                    Tranquila, observadora y con alma de reina,es la compañera perfecta para quienes saben apreciar el
+                    arte de vivir despacito… y con estilo.</p>
             </div>
             <div class="flecha">
                 <a href="keyla.html">
@@ -71,14 +99,15 @@
                 </a>
             </div>
         </div>
-        
+
         <div class="tarjeta">
             <img src="imagenes/Oliver.jpg" alt="Oliver">
             <div class="texto">
                 <h2>Oliver</h2>
-                <p>Con sus ojazos atentos y pelaje de fuego, Oliver es pura curiosidad y ternura. 
-                Siempre listo para explorar, observar y sorprender, tiene un encanto único que mezcla travesura y dulzura a partes iguales.
-                ¡Un verdadero pequeño gran explorador!</p>
+                <p>Con sus ojazos atentos y pelaje de fuego, Oliver es pura curiosidad y ternura.
+                    Siempre listo para explorar, observar y sorprender, tiene un encanto único que mezcla travesura y
+                    dulzura a partes iguales.
+                    ¡Un verdadero pequeño gran explorador!</p>
             </div>
             <div class="flecha">
                 <a href="oliver.html">
@@ -86,13 +115,13 @@
                 </a>
             </div>
         </div>
-        
+
         <div class="tarjeta">
             <img src="imagenes/Timoteo.jpg" alt="Timoteo">
             <div class="texto">
                 <h2>Timoteo</h2>
-                <p>Una bolita de ternura con mirada curiosa y cara de travieso profesional. 
-                Timoteo está listo para robar corazones, ¡y tal vez algún juguete también!</p>
+                <p>Una bolita de ternura con mirada curiosa y cara de travieso profesional.
+                    Timoteo está listo para robar corazones, ¡y tal vez algún juguete también!</p>
             </div>
             <div class="flecha">
                 <a href="timoteo.html">
@@ -104,8 +133,9 @@
             <img src="imagenes/Menta.jpg" alt="Menta">
             <div class="texto">
                 <h2>Menta</h2>
-                <p>Con esos ojos de asombro eterno y ese pelito de nube elegante, Menta parece salida de un cuento mágico.
-                Curiosa, dulce y siempre atenta... ¡imposible no enamorarse de ella!</p>
+                <p>Con esos ojos de asombro eterno y ese pelito de nube elegante, Menta parece salida de un cuento
+                    mágico.
+                    Curiosa, dulce y siempre atenta... ¡imposible no enamorarse de ella!</p>
             </div>
             <div class="flecha">
                 <a href="menta.html">
@@ -114,7 +144,7 @@
             </div>
 
         </div>
-        
+
 
     </div>
     <footer>
@@ -124,9 +154,10 @@
             <img src="imagenes/instalogo.png" alt="Instagram">
             <img src="imagenes/facebook.jpg" alt="facebook">
             <a href="mailto:caminosmarcados@gmail.com">
-               caminosmarcados@gmail.com
+                caminosmarcados@gmail.com
             </a>
         </div>
     </footer>
 </body>
+
 </html>
