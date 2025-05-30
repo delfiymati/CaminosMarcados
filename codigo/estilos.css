@@ -1,106 +1,153 @@
 body {
   background-color: #fffbfb;
 }
+
 /*header de todas las paginas*/
-header{
-    font-family: 'Londrina Shadow', cursive;
-    font-size: 50px;
-    text-align: center;
+header {
+  font-family: 'Londrina Shadow', cursive;
+  font-size: 50px;
+  text-align: center;
 
 }
-header img{
-    width: 80px;
-    height: 80px;
+
+header img {
+  width: 80px;
+  height: 80px;
 }
 
-.menu  {
-    background-color:#ecf5ff;
-    margin: 10px;
-    padding: 10px;
-    font-size: 20px;
-    font-family: 'Londrina Shadow', cursive;
-}
-.colormenu{
-    background-color: #ecf5ff;
-}
-/* nave (menu) */
-nav a{
-    font-family: 'Londrina solid', cursive;
-    margin: 15px;
-    text-decoration: none;
-    padding: 15px;
-
-}
-nav a:hover{
-    font-weight: lighter;
-}
-.boton{
-    background-color: #ccdcff;
-}
-/* footer de todas las paginas*/
-.footer {
-  background-color:#ccdcff;
+.menu {
+  background-color: #ecf5ff;
+  margin: 10px;
   padding: 10px;
+  font-size: 20px;
+  font-family: 'Londrina Shadow', cursive;
 }
-.contacto {
+
+.colormenu {
+  background-color: #ecf5ff;
   display: flex;
-  font-weight: bold;
-  font-size: 24px;
+  align-items: center;
+  justify-content: space-between;
+  /* o center si querés todo centrado */
+  padding: 1rem;
+  position: relative;
+}
+
+/* nave (menu) */
+nav a {
+  font-family: 'Londrina solid', cursive;
+  margin: 15px;
+  text-decoration: none;
+  padding: 10px;
+  background-color: #ccdcff;
+
+}
+
+nav a:hover {
+  font-weight: lighter;
+}
+
+.boton {
   background-color: #ccdcff;
 }
 
-.contacto img {
-  width: 50px;
-  height: 40px;
-  gap: 10px;
-  
+/* footer de todas las paginas*/
+.footer {
+  background-color: #ccdcff;
+  padding: 2rem;
+  text-align: center;
 }
+
+.contacto {
+  display: flex;
+  font-weight: bold;
+  background-color: #ccdcff;
+  font-size: 1.6rem;
+}
+
+.contacto img {
+  height: auto;
+  gap: 10px;
+  height: 30px;
+  margin: 0 10px;
+  vertical-align: middle;
+  width: auto;
+}
+
+.contacto a {
+  display: block;
+  margin-top: 0.5rem;
+  color: #000000;
+  text-decoration: none;
+}
+
 /* pagina principal (home) */
 .patitas {
   position: relative;
   text-align: center;
   margin-bottom: 70px;
   padding: 40px 40px;
-  background-image: url("imagenes/huellas.png"); 
+  background-image: url("imagenes/huellas.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+  margin: 3rem 1rem 2rem 1rem;
 }
+
 .patitas h2 {
-    font-family: 'Londrina Solid', cursive;
-    margin: 0% auto ;
-    padding: 20px;
-    text-align: center;
+  font-size: 1.7rem;
+  font-weight: 300;
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 20px;
+  display: inline-block;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Londrina Solid', cursive;
 }
+
+.patitas img {
+  width: 80px;
+}
+
 .huellas {
-  width: 600px; 
-  position:relative;
+  width: 600px;
+  position: relative;
   top: 0;
   left: 5%;
 }
 
-.imagenes{
+.imagenes {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  gap: 8px;
-  margin: 50px auto;
-  padding: 10px;
+  justify-content: center;
+  gap: 1.5rem;
   flex-wrap: wrap;
-  background-color: #ecf5ff;
-}
-.imagenes img {
-  width: 120%;
-  max-width: 300px;
-  height: auto;
-  border-radius: 0px;
+  padding: 0 2rem 3rem 2rem;
+ 
 }
 
-.centrado{
- margin-left: 43%;
- font-size: 30px;
- text-align: center;
- font-family: 'Londrina Shadow', cursive;
+.imagenes div {
+  flex: 1 1 300px;
+  max-width: 300px;
+}
+
+.imagenes img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.imagenes img:hover {
+  transform: scale(1.05);
+}
+
+.centrado {
+  position: absolute;
+  left: 49%;
+  transform: translateX(-50%);
+  font-size: 1.8rem;
+  font-weight: bolder;
+  font-family: 'Londrina Shadow', cursive;
 }
 
 
@@ -109,6 +156,7 @@ nav a:hover{
   padding: 30px;
   text-align: center;
 }
+
 .cuidado h2 {
   font-family: 'Londrina Solid', cursive;
   margin: 5%;
@@ -126,7 +174,7 @@ nav a:hover{
   background-size: 70%;
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   text-align: left;
 }
 
@@ -163,7 +211,7 @@ nav a:hover{
   background-size: 200px;
 }
 
-.container1{
+.container1 {
   display: flex;
   flex-direction: row;
   gap: 40px;
@@ -175,7 +223,7 @@ nav a:hover{
   flex: 1;
   min-width: 200px;
   font-size: 16px;
-  line-height: 1,6;
+  line-height: 1, 6;
   background-color: #ccdcff;
   border-radius: 10px;
   padding: 20px;
@@ -188,15 +236,16 @@ nav a:hover{
   margin-top: 20px;
   font-size: 24px;
   font-weight: bold;
-  font-family:'Londrina Solid', cursive;
+  font-family: 'Londrina Solid', cursive;
 }
+
 .texto1 p {
   font-size: 20px;
 }
 
 .invitacion {
   margin-top: 30px;
-  font-family:'Londrina Solid', cursive;
+  font-family: 'Londrina Solid', cursive;
   font-weight: 500;
   font-size: 20px;
 }
@@ -220,25 +269,28 @@ nav a:hover{
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family:'Londrina Solid', cursive;
+  font-family: 'Londrina Solid', cursive;
   padding: 40px 20px;
 }
-.pasos{
+
+.pasos {
   position: relative;
   text-align: center;
   margin-bottom: 40px;
 }
-.items{
+
+.items {
   position: relative;
   z-index: 1;
   background-color: #ccdcff;
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: left;
   font-size: 20px;
 }
-.huellas2{
+
+.huellas2 {
   position: relative;
   text-align: center;
   margin-bottom: 40px;
@@ -250,13 +302,15 @@ nav a:hover{
   z-index: 0;
   width: 300px;
 }
+
 .video {
   text-align: center;
   margin-top: 20px;
   margin-bottom: 80px;
   margin: 40px;
-  
+
 }
+
 /* pagina perros y gatos*/
 .perros {
   display: flex;
@@ -273,6 +327,7 @@ nav a:hover{
   padding: 30px;
   background-color: #f8fbff;
 }
+
 .tarjeta {
   display: flex;
   align-items: center;
@@ -280,7 +335,7 @@ nav a:hover{
   border: 1px solid #ccc;
   border-radius: 10px;
   padding: 25px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 
 }
 
@@ -297,14 +352,16 @@ nav a:hover{
   margin: 0;
   font-size: 30px;
   color: #3a3a3a;
+  font-family: 'Londrina Solid', cursive;
 }
 
 .texto p {
   margin: 0;
   font-size: 18px;
   color: #333;
-  font-family:'Londrina Solid', cursive;
+  font-family: 'Londrina Solid', cursive;
 }
+
 .texto {
   width: 80%;
 }
@@ -313,17 +370,22 @@ nav a:hover{
   width: 100px;
   height: 100px;
   background-color: #ccdcff;
-  margin-left: 800px;
 }
+.flecha button{
+  background-color: #ccdcff;
+  width: 120px;
+}
+
+
 
 /*pagina personalizada de cada uno */
 .filtros {
   display: flex;
   align-items: center;
-  justify-content: end; 
+  justify-content: end;
   gap: 10px;
-  margin: 10px 20px; 
-  flex-wrap: wrap; 
+  margin: 10px 20px;
+  flex-wrap: wrap;
 }
 
 .filtros label {
@@ -336,6 +398,7 @@ nav a:hover{
   border-radius: 5px;
   border: 1px solid #ccc;
 }
+
 .imggatos {
   display: flex;
   justify-content: center;
@@ -349,7 +412,7 @@ nav a:hover{
   width: 30%;
   border-radius: 0px;
   object-fit: cover;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .imgperros {
@@ -365,7 +428,7 @@ nav a:hover{
   width: 30%;
   border-radius: 0px;
   object-fit: cover;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -374,7 +437,7 @@ nav a:hover{
   margin: 30px auto;
   padding: 20px;
   text-align: center;
-  font-family:'Londrina Solid', cursive;
+  font-family: 'Londrina Solid', cursive;
 }
 
 .presentacion h2 {
@@ -407,7 +470,3 @@ nav a:hover{
   align-items: center;
   gap: 10px;
 }
-
-
-
-

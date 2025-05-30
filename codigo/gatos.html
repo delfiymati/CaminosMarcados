@@ -28,14 +28,16 @@
             <div class="filtros">
                 <form id="formfiltro">
                     <select name="Edad" onclick="filtrar('Edad',this,'gato')">
+                        <option disabled selected>Filtrar por Edad</option>
                         <option value="1">0 hasta 6 meses</option>
                         <option value="2">1 hasta 2 años</option>
                         <option value="3">3 hasta 6 años</option>
                         <option value="4">7 o mas</option>
                     </select>
                     <select name="Sexo" onclick="filtrar('Sexo',this,'gato')">
-                        <option value="macho">Macho</option>
-                        <option value="hembra">Hembra</option>
+                        <option disabled selected>Filtrar por Sexo</option>
+                        <option value="Macho">Macho</option>
+                        <option value="Hembra">Hembra</option>
                     </select>
 
                 </form>
@@ -150,12 +152,22 @@
     <footer>
         <div class="contacto">
             <span>Contactos</span>
-            <img src="imagenes/Whatsapp-logo-vetor.png" alt="WhatsApp">
-            <img src="imagenes/instalogo.png" alt="Instagram">
-            <img src="imagenes/facebook.jpg" alt="facebook">
-            <a href="mailto:caminosmarcados@gmail.com">
+            <a href="https://wa.me/5493516751098" target="_blank">
+                <img src="imagenes/Whatsapp-logo-vetor.png" alt="WhatsApp">
+            </a>
+            <a href="https://www.instagram.com/mmatifunes" target="_blank">
+                <img src="imagenes/instalogo.png" alt="Instagram">
+            </a>
+            <a href="https://www.facebook.com" target="_blank">
+                <img src="imagenes/facebook.jpg" alt="Facebook">
+            </a>
+            <a href="https://mail.google.com/mail/?view=cm&to=caminosmarcados@gmail.com" target="_blank">
                 caminosmarcados@gmail.com
             </a>
+
+
+
+
         </div>
     </footer>
 </body>

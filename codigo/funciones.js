@@ -78,7 +78,7 @@ let animales = [
         Nombre: "Nayla",
         Imagen: "Nayla.jpg",
         Descripcion: "Curiosa, inquieta y con una ternura que derrite, Nayla está lista para conquistar el mundo (o al menos todos los corazones). Su mirada lo dice todo: pura dulzura, valentía y ganas de jugar sin parar.",
-        Edad: "",
+        Edad: 0,
         Meses: 3,
         Sexo: "Hembra",
         Vacunas: "Primer vacuna aplicada",
@@ -97,13 +97,11 @@ function mostraranimales() {
                        <div class="texto">
                         <h2>${animal.Nombre}</h2>
                         <p>${animal.Descripcion}</p>
-                        <p>${animal.Edad}</p>
-                        <p>${animal.Meses}</p>
-                        <p>${animal.Sexo}</p>
+
                        </div>
                        <div class="flecha">
                             <button type="button" onclick="redireccionperro('${animal.Nombre}')">
-                                <img src="imagenes/flecha.png" alt="ver más">
+                                <img src="imagenes/flecha.png" alt="ver mas">
                             </button>
                        </div>
                     </div>`;
@@ -141,6 +139,51 @@ function cargarPerro() {
     img3.src = "imagenes/" + newPerro[0].Nombre + '3.jpg';
     img3.alt = newPerro[0].Nombre;
 }
+let perrosOriginales = [...animales];
+
+function filtrar1(filtro, valor, tipo) {
+    if (tipo !== "perro") return;
+
+    let f = valor.value;
+    animales = perrosOriginales.slice();
+
+    if (filtro === "Edad") {
+        const edad = parseInt(f);
+        if (edad === 1) {
+            animales = animales.filter(perro =>
+                perro.Meses !== "" && !isNaN(perro.Meses) &&
+                perro.Meses > 0 && perro.Meses <= 6
+            );
+        } else if (edad === 2) {
+            animales = animales.filter(perro =>
+                perro.Edad !== "" && !isNaN(perro.Edad) &&
+                perro.Edad >= 1 && perro.Edad <= 2
+            );
+        } else if (edad === 3) {
+            animales = animales.filter(perro =>
+                perro.Edad !== "" && !isNaN(perro.Edad) &&
+                perro.Edad >= 3 && perro.Edad <= 6
+            );
+        } else if (edad === 4) {
+            animales = animales.filter(perro =>
+                perro.Edad !== "" && !isNaN(perro.Edad) &&
+                perro.Edad >= 7
+            );
+        }
+    }
+
+    if (filtro === "Sexo") {
+        animales = animales.filter(perro =>
+            perro.Sexo &&
+            perro.Sexo.trim().toLowerCase() === f.toLowerCase()
+        );
+    }
+
+    mostraranimales();
+}
+
+
+
 let animales1 = [
     {
         Nombre: "Gina",
@@ -224,9 +267,6 @@ function mostraranimales1() {
                        <div class="texto">
                         <h2>${animal.Nombre}</h2>
                         <p>${animal.Descripcion}</p>
-                        <p>${animal.Edad}</p>
-                        <p>${animal.Meses}</p>
-                        <p>${animal.Sexo}</p>
                        </div>
                        <div class="flecha">
                             <button type="button" onclick="redirecciongato('${animal.Nombre}')">
@@ -269,59 +309,41 @@ function cargarGato() {
     img3.alt = newGato[0].Nombre
 
 }
-
+let gatosOriginales = [...animales1];
 function filtrar(filtro, valor, tipo) {
-    console.log("kfgdggdfmh")
-    if (filtro == "Edad") {
-        if (tipo == "gato") {
-            let f = valor.value
-            console.log(f)
+    console.log("filtro activado");
+
+    if (tipo == "gato") {
+        let f = valor.value;
+        console.log("valor recibido:", f);
+
+        animales1 = gatosOriginales.slice();
+
+        if (filtro == "Edad") {
             if (f == 1) {
-                animales1 = animales1.filter(gato => {
-                    return gato.Meses>0 && gato.Meses<6
-                })
+                animales1 = animales1.filter(gato => gato.Meses > 0 && gato.Meses <= 6);
             }
             if (f == 2) {
-                animales1 = animales1.filter(gato => {
-                    return gato.Edad>1 && gato.Edad<2
-                })
+                animales1 = animales1.filter(gato => gato.Edad >= 1 && gato.Edad <= 2);
             }
             if (f == 3) {
-                animales1 = animales1.filter(gato => {
-                    return gato.Edad>3 && gato.Edad<6
-                })
+                animales1 = animales1.filter(gato => gato.Edad >= 3 && gato.Edad <= 6);
             }
             if (f == 4) {
-                animales1 = animales1.filter(gato => {
-                    return gato.Edad>7
-                })
+                animales1 = animales1.filter(gato => gato.Edad >= 7);
             }
-        console.log(animales1)
-        mostraranimales1()
         }
 
-    }
-    if (filtro == "Sexo") {
-        if (tipo == "gato") {
-            let f = valor.value
-            console.log(f)
-            if (f == "Macho"){
-                animales1 = animales1.filter(gato = {
-                    return: gato.Sexo = "Macho"
-                })
+        if (filtro == "Sexo") {
+            if (f == "Macho") {
+                animales1 = animales1.filter(gato => gato.Sexo === "Macho");
             }
-            if (f=="Hembra"){
-                animales1 = animales1.filter(gato = {
-                    return: gato.Sexo  = "Hembra"
-                })
+            if (f == "Hembra") {
+                animales1 = animales1.filter(gato => gato.Sexo === "Hembra");
             }
-               console.log(animales1)
-        mostraranimales1()
         }
 
-
-
+        console.log("resultado filtrado:", animales1);
+        mostraranimales1();
     }
-
-
 }
