@@ -3,50 +3,49 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Perros</title>
+    <title>Caminos Marcados</title>
     <link href="https://fonts.googleapis.com/css2?family=Londrina+Shadow&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="estilos.css">
+
     <script type="text/javascript" src="funciones.js"></script>
 </head>
 
-<body onload="mostraranimales()">
-
+<body onload="cargarGato()">
     <header>
         <strong>CAMINOS</strong>
         <img src="imagenes/logo1.jpg" alt="logo">
         <strong>MARCADOS</strong>
     </header>
-
     <nav>
         <div class="colormenu">
-            <button class="boton" onclick="mostrarocultar()">
+            <button class="boton">
                 <img src="imagenes/Hamburger_icon.jpg" alt="burger" width="30">
             </button>
-            <span class="centrado"><strong>Perros</strong></span>
-
-            <!-- Filtros -->
+            <span class="centrado"><strong>Gatos</strong></span>
             <div class="filtros">
                 <form id="formfiltro">
-                    <select id="filtroEdadPerro" onchange="filtrar1('Edad', this, 'perro')">
+                    <select name="Edad" onclick="filtrar('Edad',this,'gato')">
                         <option disabled selected>Filtrar por Edad</option>
                         <option value="1">0 hasta 6 meses</option>
                         <option value="2">1 hasta 2 años</option>
                         <option value="3">3 hasta 6 años</option>
-                        <option value="4">7 o más</option>
+                        <option value="4">7 o mas</option>
                     </select>
-
-                    <select id="filtroSexoPerro" onchange="filtrar1('Sexo', this, 'perro')">
+                    <select name="Sexo" onclick="filtrar('Sexo',this,'gato')">
                         <option disabled selected>Filtrar por Sexo</option>
                         <option value="Macho">Macho</option>
                         <option value="Hembra">Hembra</option>
                     </select>
-                </form>
-            </div>
-        </div>
 
-        <div class="menu" id="menu">
+                </form>
+
+
+            </div>
+
+        </div>
+        <div class="menu">
             <a href="index.html">Home</a>
             <a href="sobrenosotros.html">Sobre Nosotros</a>
             <a href="comoadoptar.html">Como Adoptar</a>
@@ -55,8 +54,34 @@
             <a href="gatos.html">Gatos</a>
         </div>
     </nav>
+    <main>
+        <div class="imggatos">
+            <img id="imggatos" src="imagenes/Gina.jpg" alt="Gina">
+            <img id="imggatos2" src="imagenes/gina2.jpg" alt="Gina2">
+            <img id="imggatos3" src="imagenes/gina3.jpg" alt="Gina3">
+        </div>
 
-    <div class="perros" id="perros"></div>
+        <div class="presentacion">
+            <h2 id="nomgato"><strong>Gina</strong></h2>
+            <p><span id="personal">
+
+                </span>
+
+            </p>
+            <ul>
+                <li><strong>Edad:</strong> <span id="edad"> </span> años</li>
+                <li><strong>Meses:</strong> <span id="meses"> </span> meses</li>
+                <li><strong>Sexo:</strong> <span id="sexo"> </span></li>
+                <li><strong>Vacunas:</strong> <span id="vacunas"> </span></li>
+                <li><strong>Operaciones:</strong> <span id="operaciones"> </span></li>
+                <li><strong>Donde está:</strong> <span id="dondeesta"> </span></li>
+            </ul>
+            <p class="contactoflia">
+                <strong>Contactate con ellos para programar una reunión</strong>
+                <img src="imagenes/Whatsapp-logo-vetor.png" alt="WhatsApp" style="height: 20px;">
+            </p>
+        </div>
+    </main>
 
     <footer>
         <div class="contacto">
@@ -79,7 +104,6 @@
 
         </div>
     </footer>
-
 </body>
 
 </html>

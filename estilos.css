@@ -1,103 +1,165 @@
 body {
   background-color: #fffbfb;
 }
-.menu  {
-    background-color:#ecf5ff;
-    margin: 10px;
-    padding: 10px;
-   font-size: 20px;
-}
 
-.patitas {
-  position: relative;
+/*header de todas las paginas*/
+header {
+  font-family: 'Londrina Shadow', cursive;
+  font-size: 50px;
   text-align: center;
-  margin-bottom: 40px;
-  padding: 40px 20px;
-  background-image: url("imagenes/huellas.png"); /* asegurate de tener esta imagen */
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-}
-.patitas h2 {
-    font-family: 'Londrina Solid', cursive;
-    margin: 0% auto ;
-    padding: 10px;
-    text-align: center;
-}
-.huellas {
-  width: 1000px; /* ajustá tamaño según necesites */
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 2;
-}
-header{
-    font-family: 'Londrina Shadow', cursive;
-    font-size: 50px;
-    text-align: center;
 
 }
-header img{
-    width: 80px;
-    height: 80px;
+
+header img {
+  width: 80px;
+  height: 80px;
 }
 
-.imagenes{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  gap: 8px;
-  margin: 50px auto;
-  padding: 10px;
-  flex-wrap: wrap;
+.menu {
   background-color: #ecf5ff;
-}
-.imagenes img {
-  width: 120%;
-  max-width: 300px;
-  height: auto;
-  border-radius: 0px;
-}
-.footer {
-  background-color:#ccdcff;
+  margin: 10px;
   padding: 10px;
+  font-size: 20px;
+  font-family: 'Londrina Shadow', cursive;
+}
+
+.colormenu {
+  background-color: #ecf5ff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* o center si querés todo centrado */
+  padding: 1rem;
+  position: relative;
+}
+
+/* nave (menu) */
+nav a {
+  font-family: 'Londrina solid', cursive;
+  margin: 15px;
+  text-decoration: none;
+  padding: 10px;
+  background-color: #ccdcff;
+
+}
+
+nav a:hover {
+  font-weight: lighter;
+}
+
+.boton {
+  background-color: #ccdcff;
+}
+
+/* footer de todas las paginas*/
+.footer {
+  background-color: #ccdcff;
+  padding: 2rem;
+  text-align: center;
 }
 
 .contacto {
   display: flex;
   font-weight: bold;
-  font-size: 20px;
+  background-color: #ccdcff;
+  font-size: 1.6rem;
 }
 
 .contacto img {
-  width: 30px;
-  height: 24px;
-}
-.centrado{
- margin-left: 43%;
- font-size: 30px;
- text-align: center;
-}
-.colormenu{
-    background-color: #ecf5ff;
-}
-nav a{
-    font-family: londrina solid;
-    margin: 5px;
-    text-decoration: none;
-    padding: 5px;
-}
-nav a:hover{
-    font-weight: bold;
-}
-.boton{
-    background-color: #ccdcff;
+  height: auto;
+  gap: 10px;
+  height: 30px;
+  margin: 0 10px;
+  vertical-align: middle;
+  width: auto;
 }
 
+.contacto a {
+  display: block;
+  margin-top: 0.5rem;
+  color: #000000;
+  text-decoration: none;
+}
+
+/* pagina principal (home) */
+.patitas {
+  position: relative;
+  text-align: center;
+  margin-bottom: 70px;
+  padding: 40px 40px;
+  background-image: url("imagenes/huellas.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  margin: 3rem 1rem 2rem 1rem;
+}
+
+.patitas h2 {
+  font-size: 1.7rem;
+  font-weight: 300;
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 20px;
+  display: inline-block;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Londrina Solid', cursive;
+}
+
+.patitas img {
+  width: 80px;
+}
+
+.huellas {
+  width: 600px;
+  position: relative;
+  top: 0;
+  left: 5%;
+}
+
+.imagenes {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  padding: 0 2rem 3rem 2rem;
+ 
+}
+
+.imagenes div {
+  flex: 1 1 300px;
+  max-width: 300px;
+}
+
+.imagenes img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.imagenes img:hover {
+  transform: scale(1.05);
+}
+
+.centrado {
+  position: absolute;
+  left: 49%;
+  transform: translateX(-50%);
+  font-size: 1.8rem;
+  font-weight: bolder;
+  font-family: 'Londrina Shadow', cursive;
+}
+
+
+/* pagina de como cuidarlos */
 .cuidado {
   padding: 30px;
   text-align: center;
+}
+
+.cuidado h2 {
+  font-family: 'Londrina Solid', cursive;
+  margin: 5%;
 }
 
 .container {
@@ -112,7 +174,7 @@ nav a:hover{
   background-size: 70%;
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   text-align: left;
 }
 
@@ -138,11 +200,8 @@ nav a:hover{
   font-size: 20px;
   font-family: 'Londrina Solid', cursive;
 }
-.cuidado h2 {
-  font-family: 'Londrina Solid', cursive;
-  margin: 5%;
-}
 
+/* pagina sobre nosotros*/
 .nosotros {
   padding: 40px 20px;
   background-color: #fffbfb;
@@ -152,7 +211,7 @@ nav a:hover{
   background-size: 200px;
 }
 
-.container{
+.container1 {
   display: flex;
   flex-direction: row;
   gap: 40px;
@@ -160,53 +219,115 @@ nav a:hover{
   align-items: flex-start;
 }
 
-.texto {
+.texto1 {
   flex: 1;
   min-width: 200px;
-  max-width: 400px;
   font-size: 16px;
-  line-height: 1,6;
+  line-height: 1, 6;
+  background-color: #ccdcff;
+  border-radius: 10px;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 700px;
+
 }
 
-.texto h3 {
+.texto1 h3 {
   margin-top: 20px;
-  font-size: 18px;
+  font-size: 24px;
   font-weight: bold;
-  font-family:'Londrina Solid', cursive;
+  font-family: 'Londrina Solid', cursive;
+}
+
+.texto1 p {
+  font-size: 20px;
 }
 
 .invitacion {
   margin-top: 30px;
-  font-family:'Londrina Solid', cursive;
+  font-family: 'Londrina Solid', cursive;
   font-weight: 500;
+  font-size: 20px;
 }
 
-.imagenes {
+.imagenes2 {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  background-color: #ccdcff;
+  border-radius: 10px;
 }
 
-.imagenes img {
-  width: 270px;
-  border-radius: 8px;
+.imagenes2 img {
+  width: 296px;
+  border-radius: 10px;
   object-fit: cover;
 }
 
+/*pagina como adoptar*/
+.container2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Londrina Solid', cursive;
+  padding: 40px 20px;
+}
+
+.pasos {
+  position: relative;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.items {
+  position: relative;
+  z-index: 1;
+  background-color: #ccdcff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  font-size: 20px;
+}
+
+.huellas2 {
+  position: relative;
+  text-align: center;
+  margin-bottom: 40px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.1;
+  z-index: 0;
+  width: 300px;
+}
+
+.video {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 80px;
+  margin: 40px;
+
+}
+
+/* pagina perros y gatos*/
 .perros {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 50px;
   padding: 30px;
   background-color: #f8fbff;
 }
+
 .gatos {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 50px;
   padding: 30px;
   background-color: #f8fbff;
 }
+
 .tarjeta {
   display: flex;
   align-items: center;
@@ -214,7 +335,7 @@ nav a:hover{
   border: 1px solid #ccc;
   border-radius: 10px;
   padding: 25px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 
 }
 
@@ -231,14 +352,16 @@ nav a:hover{
   margin: 0;
   font-size: 30px;
   color: #3a3a3a;
+  font-family: 'Londrina Solid', cursive;
 }
 
 .texto p {
   margin: 0;
   font-size: 18px;
   color: #333;
-  font-family:'Londrina Solid', cursive;
+  font-family: 'Londrina Solid', cursive;
 }
+
 .texto {
   width: 80%;
 }
@@ -247,6 +370,103 @@ nav a:hover{
   width: 100px;
   height: 100px;
   background-color: #ccdcff;
-  margin-left: 800px;
+}
+.flecha button{
+  background-color: #ccdcff;
+  width: 120px;
 }
 
+
+
+/*pagina personalizada de cada uno */
+.filtros {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 10px;
+  margin: 10px 20px;
+  flex-wrap: wrap;
+}
+
+.filtros label {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.filtros select {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.imggatos {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  background-color: #ccdcff;
+}
+
+.imggatos img {
+  width: 30%;
+  border-radius: 0px;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.imgperros {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  background-color: #ccdcff;
+}
+
+.imgperros img {
+  width: 30%;
+  border-radius: 0px;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+.presentacion {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+  text-align: center;
+  font-family: 'Londrina Solid', cursive;
+}
+
+.presentacion h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.presentacion p {
+  margin: 15px 0;
+  line-height: 1.6;
+  font-size: 18px;
+}
+
+.presentacion ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+  font-size: 18px;
+}
+
+.presentacion li {
+  margin: 5px 0;
+}
+
+.contactoflia {
+  margin-top: 20px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
